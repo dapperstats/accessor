@@ -1,5 +1,5 @@
 #!/bin/bash
-# requirements: curl, mdbtools, unixodbc-dev
+# requirements: wget, mdbtools, unixodbc-dev
 
 # Pull values from options and fill if needed
 while getopts ":r:t:d:" option
@@ -31,4 +31,7 @@ fi
 mkdir $DATA_DIR -p
 
 # Download the database
-curl $REMOTE_DB_FILE --output $DATA_DIR/$TEMP_DB_FILE
+echo 
+echo "Downloading remote database..."
+echo 
+wget $REMOTE_DB_FILE -o $DATA_DIR/$TEMP_DB_FILE --show-progress
