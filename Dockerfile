@@ -4,7 +4,6 @@ FROM r-base
 # Add libraries
 RUN apt-get update \
     && apt-get install -y \
-       curl \
        mdbtools \
        unixodbc-dev
 
