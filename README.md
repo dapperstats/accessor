@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dapperstats/salvage/master/LICENSE)
 [![Lifecycle:experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 
-Robust tools for accessing <p>Access<sup>&reg;</sup></p> databases.
+Robust tools for accessing Access<sup>&reg;</sup> databases.
 
 ## Authors
 
