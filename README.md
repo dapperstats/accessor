@@ -1,9 +1,11 @@
-# Access Access<sup>&reg;</sup> Databases With Access<sup>&reg;</sup>
+# Access Access<sup>&reg;</sup> Databases Without Access to Access<sup>&reg;</sup>
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dapperstats/salvage/master/LICENSE)
 [![Lifecycle:experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 
 Robust tools for accessing Access<sup>&reg;</sup> databases.
+
+See [`documents/methods.md`](https://github.com/dapperstats/salvage/blob/master/documents/methods.md) for methods descriptions and the [`dapperstats/salvage` repo](https://github.com/dapperstats/salvage/blob/master/) to see `accessor` in action.
 
 ## Authors
 
