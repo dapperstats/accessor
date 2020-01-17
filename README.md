@@ -5,7 +5,7 @@
 
 Robust tools for accessing Access<sup>&reg;</sup> databases.
 
-See [`documents/methods.md`](https://github.com/dapperstats/salvage/blob/master/documents/methods.md) for methods descriptions and the [`dapperstats/salvage` repo](https://github.com/dapperstats/salvage/blob/master/) to see `accessor` in action.
+See [`documents/methods.md`](https://github.com/dapperstats/salvage/blob/master/documents/methods.md) for methods descriptions and the [`dapperstats/salvage` repo](https://github.com/dapperstats/salvage/) to see `accessor` in action.
 
 ## Authors
 
