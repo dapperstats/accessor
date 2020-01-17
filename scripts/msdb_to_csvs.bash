@@ -27,7 +27,6 @@ DB_DIR=$DATA_DIR/"${TEMP_DB_FILE%%.*}"
 mkdir $DB_DIR -p
 
 # Convert the database tables to csv files
-echo 
 echo "Converting to csvs..."
-echo 
 mdb-tables -1 $DATA_DIR/$TEMP_DB_FILE | xargs -L1 -d '\n' -I{} bash -c 'mdb-export "$1" "$2" > "$3"' -- $DATA_DIR/$TEMP_DB_FILE {} $DB_DIR/{}.csv
+ 

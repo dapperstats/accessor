@@ -31,7 +31,5 @@ fi
 mkdir $DATA_DIR -p
 
 # Download the database
-echo 
 echo "Downloading remote database..."
-echo 
-wget $REMOTE_DB_FILE -o $DATA_DIR/$TEMP_DB_FILE --show-progress
+wget $REMOTE_DB_FILE -nv -q -O $DATA_DIR/$TEMP_DB_FILE --show-progress
