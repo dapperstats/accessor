@@ -2,7 +2,7 @@
 
 Version numbers follow [Semantic Versioning](https://semver.org/).
 
-# [accessor v0.3.0](https://github.com/dapperstats/accessor/releases/tag/v0.1.4)
+# [accessor v0.3.0](https://github.com/dapperstats/accessor/releases/tag/v0.3.0)
 
 # First official release
 
