@@ -3,6 +3,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Lifecycle:maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
+<img src="imgs/logo.png" width="200px" align="right">
+
 Tools for accessing Access<sup>&reg;</sup> databases in the absence of access to Access<sup>&reg;</sup>.
 
 See [`documents/methods.md`](https://github.com/dapperstats/salvage/blob/master/documents/methods.md) for methods descriptions and the [`dapperstats/salvage` repo](https://github.com/dapperstats/salvage/) to see `accessor` in action.
