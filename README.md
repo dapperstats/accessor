@@ -17,4 +17,4 @@ If you are interested in contributing, see the [Contributor Guidelines](https://
 
 [**J. L. Simonis**](https://orcid.org/0000-0001-9798-0460) of [DAPPER Stats](https://www.dapperstats.com)
 
-v0.3.0
+v0.3.4
