@@ -2,13 +2,14 @@
 
 Version numbers follow [Semantic Versioning](https://semver.org/).
 
-# [accessor v0.3.0](https://github.com/dapperstats/accessor/releases/tag/v0.3.0)
+# [accessor v0.3.5](https://github.com/dapperstats/accessor/releases/tag/v0.3.5)
 
-# First official release
+## First official release
 
 ## Completed set up and stabilization of the code.
 
 ## Integration with `zenodo`
+* Releases v0.3.0 - v0.3.3 had errors and such that were being worked out via the release mechanism, so 0.3.5 should be considered the first release.
 
 ## Logo
 
