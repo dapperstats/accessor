@@ -12,7 +12,7 @@ See [`documents/methods.md`](https://github.com/dapperstats/salvage/blob/master/
 
 If you are interested in contributing, see the [Contributor Guidelines](https://github.com/dapperstats/salvage/blob/master/CONTRIBUTING.md) and [Code of Conduct](https://github.com/dapperstats/salvage/blob/master/CODE_OF_CONDUCT.md).
 
-[DAPPER Stats](https://www.dapperstats.com) provides this software under the [MIT License](https://opensource.org/licenses/MIT). If you are interested in applying the code to your own Access-associated situation, please [contact us](https://www.dapperstats.com/contact/)!
+[DAPPER Stats](https://www.dapperstats.com) provides this software under the [MIT License](https://opensource.org/licenses/MIT). If you are interested in applying the code to your own Access<sup>&reg;</sup>-associated situation, please [contact us](https://www.dapperstats.com/contact/)!
 
 ## Authors and Version Info
 
