@@ -1,0 +1,26 @@
+{
+"title": "Access Access Databases without Acess to Access",
+"creators": [
+    {
+      "affiliation": "DAPPER Stats",
+      "name": "Juniper L. Simonis",
+      "orcid": "0000-0001-9798-0460"
+    }
+],
+    "description": "Tools for making Access databases (both .mdb and .accdb) databases available to users without the use of Access. As of now, three conversion tools are available in generalized formats. [1] Conversion from an `.accdb` or `.mdb` database that may be remote or local to a local set of `.csv` files named by the tables in the database. This tool wraps around the mdbtools package (which leverages the drivers in unixodbc) to provide one-line conversion of an Access database to a folder of .csv files. This is accomplished by the `accessor.bash` script, which combines two other scripts: `retrieve_remote_db.bash` (if necessary) and `msdb_to_csvs.bash`. [2] Reading the folder of `.csv`s into R as a `list` of `data.frames` that is directly analagous to the `.accdb` or `.mdb` database of tables via the read_database() function. This is accomplished through an included R script of a few minimal functions generalizing the base capacity of R to read data files. [3] A Dockerfile that documents a Docker image (stored on Docker Hub), which provides a stable, minimal runtime environment that automatically downloads up-to-date data from a particular .accdb database (California Delta fish salvage monitoring database). The Dockerfile includes arguments that allow for simple high-level toggling of runtime arguments including the location of the file to be retrieved. Methods text included describes the bash, R, and Dockerfile script options and default values (if included)."
+    "keywords": [
+    "bash",
+    "mdbtools",
+    "unixodbc",
+    "R",
+    "databases",
+    ".accdb",
+    ".mdb",
+    "open",
+    "software container",
+    "Docker"
+  ],
+    "access_right": "open",
+    "license": "mit-license",
+    "upload_type": "software"
+}
