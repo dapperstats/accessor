@@ -1,5 +1,5 @@
-## Data Conversion
-Juniper L. Simonis, 2020-01-17
+## `accessor` methods
+Juniper L. Simonis, 2020-01-19
 
 This document outlines the processes by which an Access<sup>&reg;</sup> database is converted into local files and data objects.
 
