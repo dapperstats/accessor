@@ -2,6 +2,15 @@
 
 Version numbers follow [Semantic Versioning](https://semver.org/).
 
+# [accessor v0.4.0](https://github.com/dapperstats/accessor/releases/tag/v0.4.0)
+*2020-01-19*
+
+## Proper establishment and integration of R scipts for a fluid interactive session
+
+## Documentation to show how to use the image for your run
+
+## integration with Travis
+
 # [accessor v0.3.5](https://github.com/dapperstats/accessor/releases/tag/v0.3.5)
 
 ## First official release

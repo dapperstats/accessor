@@ -21,18 +21,20 @@
 #    where the database folder lives.
 
 
-read_database <- function(database = "Salvage_data_FTP", tables = NULL, 
+read_database <- function(database = NULL, tables = NULL, 
                           data_dir = "data", quiet = FALSE){
   if(!quiet){
     message("reading in database .csv files")
   }
   data_dir_path <- file.path(data_dir)
-  db_path <- file.path(data_dir, database)
-  file_path <- file.path(data_dir, database, file_name)
   if(!file.exists(data_dir_path)){
     return_msg <- paste0(data_dir, " does not exist")
     stop(return_msg, call. = FALSE)
   }
+  if(is.null(database)){
+    database <- list.files(data_dir)[1]
+  }
+  db_path <- file.path(data_dir, database)
   if(!file.exists(db_path)){
     return_msg <- paste0(database, " does not exist")
     stop(return_msg, call. = FALSE)
@@ -45,14 +47,16 @@ read_database <- function(database = "Salvage_data_FTP", tables = NULL,
   out
 } 
 
-csv_tables <- function(database = "Salvage_data_FTP", data_dir = "data"){
+csv_tables <- function(database = NULL, data_dir = "data"){
   data_dir_path <- file.path(data_dir)
-  db_path <- file.path(data_dir, database)
-  file_path <- file.path(data_dir, database, file_name)
   if(!file.exists(data_dir_path)){
     return_msg <- paste0(data_dir, " does not exist")
     stop(return_msg, call. = FALSE)
   }
+  if(is.null(database)){
+    database <- list.files(data_dir)[1]
+  }
+  db_path <- file.path(data_dir, database)
   if(!file.exists(db_path)){
     return_msg <- paste0(database, " does not exist")
     stop(return_msg, call. = FALSE)
@@ -63,20 +67,28 @@ csv_tables <- function(database = "Salvage_data_FTP", data_dir = "data"){
   gsub(".csv", "", csv_names)
 }
 
-read_table <- function(table = "Sample", database = "Salvage_data_FTP",
-                       data_dir = "data"){
+read_table <- function(table = NULL, database = NULL, data_dir = "data"){
   data_dir_path <- file.path(data_dir)
-  db_path <- file.path(data_dir, database)
-  file_name <- paste0(table, ".csv")
-  file_path <- file.path(data_dir, database, file_name)
   if(!file.exists(data_dir_path)){
     return_msg <- paste0(data_dir, " does not exist")
     stop(return_msg, call. = FALSE)
   }
+  if(is.null(database)){
+    database <- list.files(data_dir)[1]
+  }
+  db_path <- file.path(data_dir, database)
   if(!file.exists(db_path)){
     return_msg <- paste0(database, " does not exist")
     stop(return_msg, call. = FALSE)
   }
+
+  file_name <- paste0(table, ".csv")
+  if(is.null(table)){
+    file_opts <- list.files(db_path)
+    table_opts <- file_opts[grepl("\\.csv", file_opts)]
+    file_name <- list.files(paste0(data_dir, "/", database))[1]
+  }
+  file_path <- file.path(data_dir, database, file_name)
   if(!file.exists(file_path)){
     return_msg <- paste0(table, " does not exist")
     message(return_msg)

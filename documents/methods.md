@@ -41,17 +41,37 @@ In total, there are 5 options to the `accessor.bash` script:
 
 We package `accessor` into a stable [`Docker`](https://www.docker.com) [software container](https://www.docker.com/resources/what-container), as written out in the [`Dockerfile`](https://github.com/dapperstats/accessor/blob/master/Dockerfile) for the salvage database.
 The associated [accessor Docker image](https://hub.docker.com/r/dapperstats/accessor) is freely available on [Docker Hub](https://hub.docker.com/).
+Of particular note for general use of the image is the use of a `CMD` line in the [`Dockerfile`](https://github.com/dapperstats/accessor/blob/master/Dockerfile), which calls `container_cmd.bash` on container running.
+`container_cmd.bash` is a wrapper on `accessor.bash` with an added layer that runs an interactive [`R`](https://www.r-project.org/)  session that loads the `accessor` R functions and reads in the database `.csv` files as a `list` of `data.frames` that matches the databases. 
+The interactive `R` session is run by including the `-i y` tag.
+Further, the options for `container_cmd.bash` can be passed at the command line to the container and will override the existing defaults, allowing customization.
 
 To use the current image to generate an up-to-date container with data for yourself:
 1. (If needed) [install Docker](https://docs.docker.com/get-docker/)
    * Specific instructions vary depending on OS
 2. Open up a docker-ready terminal
 3. Download the image
-   * `sudo docker pull dapperstats/salvage`
+   * `sudo docker pull dapperstats/accessor`
 4. Build the container
-   * `sudo docker container run -ti --name salvage dapperstats/salvage`
+   * `sudo docker container run -ti --name acc dapperstats/accessor`
+   * To customize the arguments of `container_cmd.bash` in the container build, add the command with arguments like
+     *  `sudo docker container run -ti --name acc dapperstats/accessor bash scripts/container_cmd.bash -r "ftp://ftp.wildlife.ca.gov/Delta%20Smelt/NBA.mdb" -i y`
 5. Copy the data out from the container 
-   * `sudo docker cp salvage:/data .`
+   * `sudo docker cp acc:/data .`
+
+Note that the customization option in step **4.** allows for a user to 
+
+1. `-r`: path to a **r**emote database
+2. `-l`: path to a **l**ocal database
+3. `-t`: name for the **t**emporary file when a remote database is downloaded
+   * Default value is the name of the file on the remote server
+4. `-d`: path to the **d**ata directory where the database's folder of `.csv`s will be located
+   * Default value is `data`
+5. `-k`: `y` or `n` as to whether or not to **k**eep the temporary db file
+   * Default value is `n`
+6. `-i`: `y` or `n` as to whether or not to start an **i**nteractive R session
+   * Default value is `n`
+
 
 ### `R` script: local `.csv`s to `R` `list` object 
 
