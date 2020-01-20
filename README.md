@@ -1,5 +1,6 @@
 # Access Access<sup>&reg;</sup> Databases without Access to Access<sup>&reg;</sup>
 
+[![Build Status](https://travis-ci.org/dapperstats/accessor.svg?branch=master)](https://travis-ci.org/dapperstats/accessor)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Lifecycle:maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3611911.svg)](https://doi.org/10.5281/zenodo.3611911)
@@ -9,10 +10,14 @@
 Tools for accessing Access<sup>&reg;</sup> databases in the absence of access to Access<sup>&reg;</sup>.
 
 The focal component of `accessor` (unlocking the Access<sup>&reg;</sup> database) is built on top of [`mdbtools`](http://mdbtools.sourceforge.net/) and [`unixodcb`](http://www.unixodbc.org/) software libraries and consists of a set of bash scripts with options that allow the user to target a remote (`-r`) or local (`-l`) database.
+
 A folder (named after the database) is created and populated with `.csv` files (one for each table, named accordingly) which can then optionally be read into [`R`](https://www.r-project.org/) using a set of generalized functions. 
+
 We package `accessor` into a stable yet flexible [`Docker`](https://www.docker.com) [software container](https://www.docker.com/resources/what-container), as written out in the [`Dockerfile`](https://github.com/dapperstats/accessor/blob/master/Dockerfile) and with an available image on [Docker Hub](https://hub.docker.com/r/dapperstats/accessor). 
-Default settings are for the [`salvage` database](https://github.com/dapperstats/salvage/), but users can specify any remote or local database to be converted to `.csv`s and can automate loading of the data into `R` via command line options. 
-See the [`methods description`](https://github.com/dapperstats/salvage/blob/master/documents/methods.md) for more methods descriptions and the [`salvage` repo](https://github.com/dapperstats/salvage/) to see `accessor` in action.
+
+Default settings are for the [California Delta](https://en.wikipedia.org/wiki/Sacramento%E2%80%93San_Joaquin_River_Delta) [fish salvage database](https://wildlife.ca.gov/Conservation/Delta/Salvage-Monitoring) (as implemented in the [`salvage` repo](https://github.com/dapperstats/salvage/)) but users can specify any remote or local database to be converted to `.csv`s and can automate loading of the data into `R` via command line options. 
+
+See the [`methods description`](https://github.com/dapperstats/accessor/blob/master/documents/methods.md) for more details and the [`salvage` repo](https://github.com/dapperstats/salvage/) to see `accessor` in action.
 
 ## Authors and Version Info
 
