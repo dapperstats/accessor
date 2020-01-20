@@ -3,6 +3,6 @@ sudo: required
 
 script:
   - docker build -t dapperstats/accessor:travis . 
-
-after_success:
+  - docker run --name acc -t dapperstats/accessor:travis
+  - docker cp acc:/data . 
   - ls data
