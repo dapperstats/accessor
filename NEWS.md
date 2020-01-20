@@ -2,6 +2,11 @@
 
 Version numbers follow [Semantic Versioning](https://semver.org/).
 
+# [accessor v0.4.1](https://github.com/dapperstats/accessor/releases/tag/v0.4.1)
+*2020-01-19*
+
+## Minor edits
+
 # [accessor v0.4.0](https://github.com/dapperstats/accessor/releases/tag/v0.4.0)
 *2020-01-19*
 

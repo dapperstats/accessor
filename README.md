@@ -23,7 +23,7 @@ See the [`methods description`](https://github.com/dapperstats/accessor/blob/mas
 
 [**J. L. Simonis**](https://orcid.org/0000-0001-9798-0460) of [DAPPER Stats](https://www.dapperstats.com)
 
-v0.4.0
+v0.4.1
 
 If you are interested in contributing, see the [Contributor Guidelines](https://github.com/dapperstats/salvage/blob/master/CONTRIBUTING.md) and [Code of Conduct](https://github.com/dapperstats/salvage/blob/master/CODE_OF_CONDUCT.md).
 
