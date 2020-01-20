@@ -1,13 +1,8 @@
 language: bash
 sudo: required
 
-install:
-  - docker pull dapperstats/accessor
-  - docker run --name acc -t dapperstats/accessor
-  - docker cp acc:/data .
-
 script:
-  - ls data
+  - docker build -t dapperstats/accessor:travis . 
 
 after_success:
   - ls data

@@ -1,5 +1,6 @@
 # Access Access<sup>&reg;</sup> Databases without Access to Access<sup>&reg;</sup>
 
+[![Build Status](https://travis-ci.org/dapperstats/accessor.svg?branch=master)](https://travis-ci.org/dapperstats/accessor)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Lifecycle:maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3611911.svg)](https://doi.org/10.5281/zenodo.3611911)
