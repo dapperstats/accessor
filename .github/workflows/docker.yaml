@@ -17,4 +17,6 @@ jobs:
       - name: build image
         run: |
           docker build -t dapperstats/accessor:gha . 
-
+          docker run --name acc -t dapperstats/accessor:gha
+          docker cp acc:/data . 
+          ls data
