@@ -24,7 +24,7 @@ sudo bash scripts/accessor.bash -r ftp://ftp.wildlife.ca.gov/salvage/Salvage_dat
 ``` 
 or
 ```
-sudo bash scripts/accessor.bash -r path/to/local.mdb
+sudo bash scripts/accessor.bash -l path/to/local.mdb
 ```
 
 In total, there are 5 options to the `accessor.bash` script:
