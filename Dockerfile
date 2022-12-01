@@ -11,7 +11,7 @@ RUN apt-get update \
 COPY scripts scripts
 
 # Default values for arguments passed to environment variables
-ARG r="ftp://ftp.wildlife.ca.gov/salvage/Salvage_data_FTP.accdb" 
+ARG r="ftp://filelib.wildlife.ca.gov/Public/salvage/Salvage_data_FTP.accdb" 
 ARG l=local.accdb 
 ARG d=data 
 ARG k=n
