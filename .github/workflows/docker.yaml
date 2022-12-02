@@ -1,0 +1,22 @@
+# accessor docker
+name: docker
+
+on:
+  pull_request:
+    branches:
+      - master
+
+
+
+jobs:
+  build:
+    name: container build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: build image
+        run: |
+          docker build -t dapperstats/accessor:gha . 
+          docker run --name acc -t dapperstats/accessor:gha
+          docker cp acc:/data . 
+          ls data

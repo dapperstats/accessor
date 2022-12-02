@@ -33,7 +33,7 @@ if [ ! "$DATA_DIR" ]
 fi
 
 
-# If pointing to a remote DB, use curl
+# If pointing to a remote DB, use wget
 if [ "$REMOTE_DB_FILE" ]
   then
      bash scripts/retrieve_remote_db.bash  -r $REMOTE_DB_FILE -t $TEMP_DB_FILE -d $DATA_DIR
